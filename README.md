@@ -1,5 +1,3 @@
 # radio-broadcast
 
-Broadcast stero inputs to a configured icecast server from norns.
-
-argh
+Broadcast stereo inputs to a configured icecast server from norns.
