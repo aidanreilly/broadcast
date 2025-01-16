@@ -1,4 +1,4 @@
---- Dumb broadcast to radiocult.fm icecast server
+--- Dumb broadcast to icecast server
 -- @oootini
 
 function init()
@@ -53,5 +53,5 @@ function init()
   -- Say something
   screen.level(15)
   screen.move(0, 5)
-  screen.text("We are live on the internet!")
+  screen.text("We live on the internet!")
 end
