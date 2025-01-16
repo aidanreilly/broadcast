@@ -1,4 +1,4 @@
---- Dumb broadcast to Eist radiocult address
+--- Dumb broadcast to radiocult.fm icecast server
 -- @oootini
 
 function init()
@@ -25,7 +25,7 @@ function init()
     os.execute(cmd)
   end
 
-  -- clean up old
+  -- Clean up the old
   os.execute("pkill -f broadcast0")
   os.execute("pkill -f broadcast2")
   os.execute("pkill -f radio.mp3")
@@ -35,6 +35,7 @@ function init()
 
   -- Source and export variables from the .env file
   os.execute("source .env")
+
   -- Will this actually work? IDK too tired
   os.execute("export username")
   os.execute("export password")
@@ -42,10 +43,15 @@ function init()
   os.execute("export port")
   os.execute("export stream-slug")
   os.execute("export mount-point")
-  os.execute("chmod +x broadcast0.sh")
-  os.execute("chmod +x broadcast1.sh")
-  os.execute("chmod +x broadcast2.sh")
+  os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast0.sh")
+  os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast1.sh")
+  os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast2.sh")
 
-  -- broadcast!
-  os.execute("nohup /home/we/dust/code/broadcast/broadcast0.sh &")
+  -- Broadcast!
+  os.execute("nohup /home/we/dust/code/radio-broadcast/broadcast0.sh &")
+
+  -- Say something
+  screen.level(15)
+  screen.move(0, 5)
+  screen.text("We are live on the internet!")
 end
