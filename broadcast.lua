@@ -33,25 +33,17 @@ function init()
   os.execute("pkill -9 icecast2")
   os.execute("pkill -9 darkice")
 
-  -- Source and export variables from the .env file
-  os.execute("source .env")
-
-  -- Will this actually work? IDK too tired
-  os.execute("export username")
-  os.execute("export password")
-  os.execute("export icecast-server")
-  os.execute("export port")
-  os.execute("export stream-slug")
-  os.execute("export mount-point")
+  -- Enable the new
   os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast0.sh")
   os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast1.sh")
   os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast2.sh")
 
   -- Broadcast!
-  os.execute("nohup /home/we/dust/code/radio-broadcast/broadcast0.sh &")
+  os.execute("bash -c 'set -a && source /home/we/dust/code/radio-broadcast/icecast.env && nohup /home/we/dust/code/radio-broadcast/broadcast0.sh &'")
 
   -- Say something
   screen.level(15)
   screen.move(0, 5)
-  screen.text("We live on the internet!")
+  screen.text("We live on the internet radio mom!")
+  screen.update()
 end

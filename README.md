@@ -14,3 +14,12 @@ port=<PORT>
 mountpoint=<STREAM MOUNTPOINT>
 slug=<STREAM SLUG>
 ```
+
+Install from an SSH connection to norns:
+
+```cmd
+cd ~/dust/code && git clone https://github.com/aidanreilly/radio-broadcast.git
+```
+
+TODO: how to load script via SSH?
+

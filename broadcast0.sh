@@ -2,6 +2,6 @@
 
 while :
 do
-	broadcast1.sh
-	sleep 10
+    /home/we/dust/code/radio-broadcast/broadcast1.sh
+    sleep 10
 done
