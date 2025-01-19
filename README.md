@@ -21,5 +21,7 @@ Install from an SSH connection to norns:
 cd ~/dust/code && git clone https://github.com/aidanreilly/radio-broadcast.git
 ```
 
-TODO: how to load script via SSH?
+# Hacking
 
+-- start the broadcast after booting
+norns.script.load("code/radio-broadcast/broadcast.lua")

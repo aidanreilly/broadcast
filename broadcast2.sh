@@ -7,7 +7,7 @@ function cleanup {
 
 trap cleanup EXIT
 
-while :
+while : 
 do
     pkill -f radio.mp3
     ffmpeg -re -i http://localhost:8000/radio.mp3 -acodec libmp3lame -content_type audio/mpeg \

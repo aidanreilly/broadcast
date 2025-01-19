@@ -44,6 +44,6 @@ function init()
   -- Say something
   screen.level(15)
   screen.move(0, 5)
-  screen.text("We live on the internet radio mom!")
+  screen.text("We live on the internet!")
   screen.update()
 end
