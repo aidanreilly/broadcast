@@ -29,24 +29,8 @@ Load the script via SSH connection:
 /home/we/bin/maiden-repl <<< 'norns.script.load("code/broadcast/radio.lua")'
 ```
 
-Update `./norns/lua/core/norns.lua:272` to always start `radio.lua`, regardless of shutdown state. 
+Where does this go lol 
 
 ```lua
--- startup function will be run after I/O subsystems are initialized,
--- but before I/O event loop starts ticking (see readme-script.md)
-_startup = function()
-  require('core/startup')
-  norns.script.load("code/broadcast/radio.lua")  -- Always start the radio
-end
-
-_post_startup = function()
-   print('_norns._post_startup')
-   hook.system_post_startup()
-end
-
--- comment this for radio hack above
--- rerun the current script
--- norns.rerun = function()
-  -- norns.script.load(norns.state.script)
--- end
+norns.script.load("code/broadcast/radio.lua")  -- Always start the radio
 ```
