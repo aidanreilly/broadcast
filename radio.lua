@@ -35,16 +35,16 @@ function init()
   os.execute("pkill -9 darkice")
 
   -- Enable the new
-  os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast0.sh")
-  os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast1.sh")
-  os.execute("chmod +x /home/we/dust/code/radio-broadcast/broadcast2.sh")
+  os.execute("chmod +x /home/we/dust/code/broadcast/broadcast0.sh")
+  os.execute("chmod +x /home/we/dust/code/broadcast/broadcast1.sh")
+  os.execute("chmod +x /home/we/dust/code/broadcast/broadcast2.sh")
 
   -- Broadcast!
-  os.execute("bash -c 'set -a && source /home/we/dust/code/radio-broadcast/icecast.env && nohup /home/we/dust/code/radio-broadcast/broadcast0.sh &'")
+  os.execute("bash -c 'set -a && source /home/we/dust/code/broadcast/icecast.env && nohup /home/we/dust/code/broadcast/broadcast0.sh &'")
 
   -- Say something
   screen.level(15)
   screen.move(0, 5)
-  screen.text("We live on the internet!")
+  screen.text("We are live on the internet mom!")
   screen.update()
 end
