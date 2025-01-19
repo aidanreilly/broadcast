@@ -2,6 +2,7 @@
 -- @oootini
 
 function init()
+  params:bang()
   local toinstall=""
   local s=util.os_capture("which icecast2")
   if s=="" then
