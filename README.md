@@ -28,3 +28,12 @@ Load the script via SSH connection:
 ```
 /home/we/bin/maiden-repl <<< 'norns.script.load("code/broadcast/radio.lua")'
 ```
+
+Update `./norns/lua/core/norns.lua` to always start `radio.lua`, regardless of shutdown state. 
+
+```
+--- hack: always run radio.lua
+norns.rerun = function()
+  norns.script.load("code/broadcast/radio.lua")
+end
+```
