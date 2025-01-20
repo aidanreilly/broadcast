@@ -29,7 +29,7 @@ Load the script via SSH connection:
 /home/we/bin/maiden-repl <<< 'norns.script.load("code/broadcast/radio.lua")'
 ```
 
-Where does this go lol 
+Add the following after core/state.lua#81 `norns.scripterror("NO SCRIPT")`:
 
 ```lua
 norns.script.load("code/broadcast/radio.lua")  -- Always start the radio
