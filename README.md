@@ -9,7 +9,7 @@ Create an `icecast.env` file at the root of the repo with the following content,
 ```txt
 username=<USERNAME>
 password=<PASSWORD>
-icecast-server=<ICECAST SERVER URL>
+icecast_server=<ICECAST SERVER URL>
 port=<PORT>
 mountpoint=<STREAM MOUNTPOINT>
 slug=<STREAM SLUG>
