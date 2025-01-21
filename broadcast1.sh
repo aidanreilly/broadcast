@@ -18,8 +18,8 @@ else
     pkill -f radio.mp3 # kills curl
     nohup darkice -c /home/we/dust/code/broadcast/darkice.cfg &
     sleep 1
-    jack_connect system:playback_1 darkice:left
-    jack_connect system:playback_2 darkice:right
+    jack_connect crone:output_1 darkice:left
+    jack_connect crone:output_2 darkice:right
     sleep 1
 fi
 
