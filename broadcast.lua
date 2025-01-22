@@ -2,7 +2,6 @@
 -- @oootini
 
 function init()
-  params:bang()
   local toinstall=""
   local s=util.os_capture("which icecast2")
   if s=="" then
@@ -25,6 +24,8 @@ function init()
     os.execute("sudo apt-get update")
     os.execute(cmd)
   end
+  -- load pset
+  params:read(1)
 
   -- Clean up the old
   os.execute("pkill -f broadcast0")
