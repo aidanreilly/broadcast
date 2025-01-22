@@ -51,7 +51,7 @@ function redraw()
   screen.clear()
   screen.move(10,10)
   screen.text("Broadcasting live!")
-  screen.move(20,10)
+  screen.move(10,30)
   screen.text("Éist x Plugd")
   screen.update()
 end
