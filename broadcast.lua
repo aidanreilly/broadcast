@@ -44,8 +44,14 @@ function init()
   os.execute("bash -c 'set -a && source /home/we/dust/code/broadcast/icecast.env && nohup /home/we/dust/code/broadcast/broadcast0.sh &'")
 
   -- Say something
-  screen.level(15)
-  screen.move(0, 5)
-  screen.text("We are live on the internet mom!")
+  redraw()
+end
+
+function redraw()
+  screen.clear()
+  screen.move(10,10)
+  screen.text("Broadcasting live!")
+  screen.move(10,20)
+  screen.text("Éist x Plugd x Brian's wines")
   screen.update()
 end
