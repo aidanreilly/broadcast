@@ -26,11 +26,11 @@ Note if you are running this on a headless norns, you need to run `norns.shutdow
 Load the script via SSH connection:
 
 ```
-/home/we/bin/maiden-repl <<< 'norns.script.load("code/broadcast/radio.lua")'
+/home/we/bin/maiden-repl <<< 'norns.script.load("code/broadcast/broadcast.lua")'
 ```
 
 Add the following after core/state.lua#81 `norns.scripterror("NO SCRIPT")`:
 
 ```lua
-norns.script.load("code/broadcast/radio.lua")  -- Always start the radio
+norns.script.load("code/broadcast/broadcast.lua")  -- Always start the radio
 ```
